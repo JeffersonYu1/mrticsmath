@@ -15,7 +15,7 @@ In 2019, v2.0.0 was released, which added major features such as the option to c
 ## Live Demo
 https://mrticsmath.weebly.com
 
-To temporarily view the full version of Mr. Tics Math, use username "github" and password "github". 
+To temporarily view the full version of Mr. Tics Math, use username "github" and password "githubtics". 
 
 ## Contact
 * Jefferson Yu - [fu.yao.yu at hotmail dot com](mailto:fu.yao.yu@hotmail.com)
