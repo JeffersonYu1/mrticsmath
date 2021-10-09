@@ -1,5 +1,5 @@
 # Mr. Tics Math
-Tools to enhance the execution of the annual Math Contest hosted by [Elkins High School](https://www.fortbendisd.com/ehs). Written by Jefferson Yu.
+Practice problem generator to aid students in preparing for the Number Sense and Calculator contests. Written by Jefferson Yu.
 
 ## About the Project
 ### Motivation
