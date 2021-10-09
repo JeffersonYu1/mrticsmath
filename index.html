@@ -1,0 +1,238 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<script src="src/main.js"></script>
+		<link rel="stylesheet" type="text/css" href="src/style.css">
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.3.5/jspdf.plugin.autotable.js"></script>
+		
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+	</head>
+
+	<body onload="getInfo()">
+	
+	<h1>Mr. Tics' Number Sense Tool</h1>
+	<p id="seeingThis">If you are seeing this and are not being prompted for login information, reload the page to try again, or head over to the <a href="/purchase.html">Purchase Page</a> to purchase the tool and request an account.<br><br>Mr. Tics' Number Sense Tool will appear here.</p>
+	<br>
+	<div id="mrticsnumbersensetool">
+		<p><a href="/files/theme/NumberSenseBigSet.pdf">Number Sense Rules and Strategies Packet</a></p>
+		<div id="selector">			
+			<a onclick="selectAll()" class="wsite-button wsite-button-small wsite-button-normal">
+            	<span class="wsite-button-inner">Select All</span>
+         	</a>
+         	<a onclick="deselectAll()" class="wsite-button wsite-button-small wsite-button-normal">
+            	<span class="wsite-button-inner">Deselect All</span>
+         	</a>
+			<br>
+			<br>
+			<div id="checkboxes">
+				<input type="checkbox" id="rule0" name="rule0" value="rule0" class="ruleCheckbox">2x2 FOIL (LOIF)
+				<br>
+				<input type="checkbox" id="rule1" name="rule1" value="rule1" class="ruleCheckbox">Squaring Numbers Ending in 5
+				<br>
+				<input type="checkbox" id="rule2" name="rule2" value="rule2" class="ruleCheckbox">Multiplying Consecutive Decades
+				<br>
+				<input type="checkbox" id="rule3" name="rule3" value="rule3" class="ruleCheckbox">Multiplying Two Numbers Ending in 5 and Tens Digits Both Even
+				<br>
+				<input type="checkbox" id="rule4" name="rule4" value="rule4" class="ruleCheckbox">Multiplying Two Numbers Ending in 5 and Tens Digits Both Odd
+				<br>
+				<input type="checkbox" id="rule5" name="rule5" value="rule5" class="ruleCheckbox">Multiplying Two Numbers Ending in 5 and Tens Digits Odd and Even
+				<br>
+				<input type="checkbox" id="rule6" name="rule6" value="rule6" class="ruleCheckbox">Multiplying by 12 1/2
+				<br>
+				<input type="checkbox" id="rule7" name="rule7" value="rule7" class="ruleCheckbox">Multiplying by 16 2/3
+				<br>
+				<input type="checkbox" id="rule8" name="rule8" value="rule8" class="ruleCheckbox">Multiplying by 33 1/3
+				<br>
+				<input type="checkbox" id="rule9" name="rule9" value="rule9" class="ruleCheckbox">Multiplying by 25
+				<br>
+				<input type="checkbox" id="rule10" name="rule10" value="rule10" class="ruleCheckbox">Multiplying by 50
+				<br>
+				<input type="checkbox" id="rule11" name="rule11" value="rule11" class="ruleCheckbox">Multiplying by 75
+				<br>
+				<input type="checkbox" id="rule12" name="rule12" value="rule12" class="ruleCheckbox">Multiplying by 37 1/2
+				<br>
+				<input type="checkbox" id="rule13" name="rule13" value="rule13" class="ruleCheckbox">Multiplying by 62 1/2
+				<br>
+				<input type="checkbox" id="rule14" name="rule14" value="rule14" class="ruleCheckbox">Multiplying by 87 1/2
+				<br>
+				<input type="checkbox" id="rule15" name="rule15" value="rule15" class="ruleCheckbox">Multiplying by 83 1/3
+				<br>
+				<input type="checkbox" id="rule16" name="rule16" value="rule16" class="ruleCheckbox">Multiplying by 66 2/3
+				<br>
+				<input type="checkbox" id="rule17" name="rule17" value="rule17" class="ruleCheckbox">Multiplying by 125
+				<br>
+				<input type="checkbox" id="rule18" name="rule18" value="rule18" class="ruleCheckbox">Multiplying when Tens Digits are Equal and Units Digits add to 10
+				<br>
+				<input type="checkbox" id="rule19" name="rule19" value="rule19" class="ruleCheckbox">Multiplying when Tens Digits add to 10 and Units Digits are Equal
+				<br>
+				<input type="checkbox" id="rule20" name="rule20" value="rule20" class="ruleCheckbox">Multiplying Two Numbers in the 90s
+				<br>
+				<input type="checkbox" id="rule21" name="rule21" value="rule21" class="ruleCheckbox">Multiplying Two Numbers Near and Greater than 100
+				<br>
+				<input type="checkbox" id="rule22" name="rule22" value="rule22" class="ruleCheckbox">Multiplying Two Numbers with Same First Digit and a 0 in the Middle
+				<br>
+				<input type="checkbox" id="rule23" name="rule23" value="rule23" class="ruleCheckbox">Multiplying by 3367
+				<br>
+				<input type="checkbox" id="rule24" name="rule24" value="rule24" class="ruleCheckbox">Multiplying 2-Digit Numbers by 11
+				<br>
+				<input type="checkbox" id="rule25" name="rule25" value="rule25" class="ruleCheckbox">Multiplying 3-Digit Numbers by 11
+				<br>
+				<input type="checkbox" id="rule26" name="rule26" value="rule26" class="ruleCheckbox">Multiplying 3-Digit Numbers by 111
+				<br>
+				<input type="checkbox" id="rule27" name="rule27" value="rule27" class="ruleCheckbox">Multiplying 2-Digit Numbers by 111
+				<br>
+				<input type="checkbox" id="rule28" name="rule28" value="rule28" class="ruleCheckbox">Multiplying 2-Digit Numbers by 101
+				<br>
+				<input type="checkbox" id="rule29" name="rule29" value="rule29" class="ruleCheckbox">Multiplying 3-Digit Numbers by 101
+				<br>
+				<input type="checkbox" id="rule30" name="rule30" value="rule30" class="ruleCheckbox">Multiplying 2-Digit Numbers by 1001
+				<br>
+				<input type="checkbox" id="rule31" name="rule31" value="rule31" class="ruleCheckbox">Halving and Doubling
+				<br>
+				<input type="checkbox" id="rule32" name="rule32" value="rule32" class="ruleCheckbox">Multiplying One Number in the Hundreds and One Number in the 90s
+				<br>
+				<input type="checkbox" id="rule33" name="rule33" value="rule33" class="ruleCheckbox">Fraction FOIL
+				<br>
+				<input type="checkbox" id="rule34" name="rule34" value="rule34" class="ruleCheckbox">Fraction FOIL with Same Fraction
+				<br>
+				<input type="checkbox" id="rule35" name="rule35" value="rule35" class="ruleCheckbox">Fraction FOIL with Fractions Adding to 1
+				<br>
+				<input type="checkbox" id="rule36" name="rule36" value="rule36" class="ruleCheckbox">Adding Reciprocals
+				<br>
+				<input type="checkbox" id="rule37" name="rule37" value="rule37" class="ruleCheckbox">Solving Percent Of
+				<br>
+				<input type="checkbox" id="rule38" name="rule38" value="rule38" class="ruleCheckbox">2-Digit Base N to Base 10
+				<br>
+				<input type="checkbox" id="rule39" name="rule39" value="rule39" class="ruleCheckbox">N/40 to a Decimal
+				<br>
+				<input type="checkbox" id="rule40" name="rule40" value="rule40" class="ruleCheckbox">Remainder When Diving By 9
+				<br>
+				<input type="checkbox" id="rule41" name="rule41" value="rule41" class="ruleCheckbox">Base 8 to Base 2
+				<br>
+				<input type="checkbox" id="rule42" name="rule42" value="rule42" class="ruleCheckbox">Cubic Feet to Cubic Yards
+				<br>
+				<input type="checkbox" id="rule43" name="rule43" value="rule43" class="ruleCheckbox">Converting between Feet per Second (fps) and Miles per Hour (mph)
+				<br>
+				<input type="checkbox" id="rule44" name="rule44" value="rule44" class="ruleCheckbox">Subsets
+				<br>
+				<input type="checkbox" id="rule45" name="rule45" value="rule45" class="ruleCheckbox">Improper Subsets
+				<br>
+				<input type="checkbox" id="rule46" name="rule46" value="rule46" class="ruleCheckbox">Proper Subsets
+				<br>
+				<input type="checkbox" id="rule47" name="rule47" value="rule47" class="ruleCheckbox">Power Sets
+				<br>
+				<input type="checkbox" id="rule48" name="rule48" value="rule48" class="ruleCheckbox">Repeating Decimals to Fractions (type 1)
+				<br>
+				<input type="checkbox" id="rule49" name="rule49" value="rule49" class="ruleCheckbox">Repeating Decimals to Fractions (type 2)
+				<br>
+				<input type="checkbox" id="rule50" name="rule50" value="rule50" class="ruleCheckbox">Gallons to Cubic Inches
+				<br>
+				<input type="checkbox" id="rule51" name="rule51" value="rule51" class="ruleCheckbox">Finding Pentagonal Numbers
+				<br>
+				<input type="checkbox" id="rule52" name="rule52" value="rule52" class="ruleCheckbox">Finding Triangular Numbers
+				<br>
+				<input type="checkbox" id="rule53" name="rule53" value="rule53" class="ruleCheckbox">Estimating Pi to an Odd Power
+				<br>
+				<input type="checkbox" id="rule54" name="rule54" value="rule54" class="ruleCheckbox">Estimating Pi to an Even Power
+				<br>
+				<input type="checkbox" id="rule55" name="rule55" value="rule55" class="ruleCheckbox">Multiplying an Improper Fraction by its Numerator (the "more" problem)
+				<br>
+				<input type="checkbox" id="rule56" name="rule56" value="rule56" class="ruleCheckbox">Multiplying a Common Fraction by its Numerator (the "less" problem)
+				<br>
+				<input type="checkbox" id="rule57" name="rule57" value="rule57" class="ruleCheckbox">Multiplying Two Numbers Near 1000
+				<br>
+				<input type="checkbox" id="rule58" name="rule58" value="rule58" class="ruleCheckbox">Solving for Working Together (reciprocal work problem)
+				<br>
+				<input type="checkbox" id="rule59" name="rule59" value="rule59" class="ruleCheckbox">Solving for Working Against One Another (reciprocal work problem)
+				<br>
+				<input type="checkbox" id="rule60" name="rule60" value="rule60" class="ruleCheckbox">Sum of Consecutive Integers
+				<br>
+				<input type="checkbox" id="rule61" name="rule61" value="rule61" class="ruleCheckbox">Sum of Consecutive Even Integers
+				<br>
+				<input type="checkbox" id="rule62" name="rule62" value="rule62" class="ruleCheckbox">Sum of Consecutive Odd Integers
+				<br>
+				<input type="checkbox" id="rule63" name="rule63" value="rule63" class="ruleCheckbox">Finding Hexagonal Numbers
+				<br>
+				<input type="checkbox" id="rule64" name="rule64" value="rule64" class="ruleCheckbox">Properties of a Space Diagonal of a Cube
+				<br>
+				<input type="checkbox" id="rule65" name="rule65" value="rule65" class="ruleCheckbox">Finding the Number of Diagonals in a Polygon
+				<br>
+				<input type="checkbox" id="rule66" name="rule66" value="rule66" class="ruleCheckbox">Finding the Total Number of Factors
+				<br>
+				<input type="checkbox" id="rule67" name="rule67" value="rule67" class="ruleCheckbox">Estimating a 4-Digit Square Root
+				<br>
+				<input type="checkbox" id="rule68" name="rule68" value="rule68" class="ruleCheckbox">Estimating a 5-Digit Square Root
+				<br>
+				<input type="checkbox" id="rule69" name="rule69" value="rule69" class="ruleCheckbox">Converting Celsius to Fahrenheit
+				<br>
+				<input type="checkbox" id="rule70" name="rule70" value="rule70" class="ruleCheckbox">Converting Fahrenheit to Celsius
+				<br>
+				<input type="checkbox" id="rule71" name="rule71" value="rule71" class="ruleCheckbox">Find the Area of a Square Given the Diagonal
+				<br>
+				<input type="checkbox" id="rule72" name="rule72" value="rule72" class="ruleCheckbox">Estimating 3x3 Multiplication
+				<br>
+				<input type="checkbox" id="rule73" name="rule73" value="rule73" class="ruleCheckbox">Dividing by 11 and Finding the Remainder
+				<br>
+				<input type="checkbox" id="rule74" name="rule74" value="rule74" class="ruleCheckbox">Multiplying by Rounding
+				<br>
+				<input type="checkbox" id="rule75" name="rule75" value="rule75" class="ruleCheckbox">Difference of Squares
+				<br>
+				<input type="checkbox" id="rule76" name="rule76" value="rule76" class="ruleCheckbox">Addition by Rounding
+				<br>
+				<input type="checkbox" id="rule77" name="rule77" value="rule77" class="ruleCheckbox">Finding Complement & Supplement of an Angle
+				<br>
+				<input type="checkbox" id="rule78" name="rule78" value="rule78" class="ruleCheckbox">Finding Difference between Supplement and Complement of an Angle
+				<br>
+				<input type="checkbox" id="rule79" name="rule79" value="rule79" class="ruleCheckbox">Finding Sum of Supplement and Complement of an Angle
+				<br>
+				<input type="checkbox" id="rule80" name="rule80" value="rule80" class="ruleCheckbox">Finding the Number of Relatively Prime Numbers
+				<br>
+				<input type="checkbox" id="rule81" name="rule81" value="rule81" class="ruleCheckbox">Finding the Product of LCM and GCF
+				<br>
+				<input type="checkbox" id="rule82" name="rule82" value="rule82" class="ruleCheckbox">Estimation when Multiplying 3 Consecutive or Near-Consecutive Terms
+				<br>
+				<input type="checkbox" id="rule83" name="rule83" value="rule83" class="ruleCheckbox">Squares (1-40)
+				<br>
+				<input type="checkbox" id="rule84" name="rule84" value="rule84" class="ruleCheckbox">Cubes (1-20)
+				<br>
+			</div>
+			<br>
+			<a onclick="selectionCheck();generateProblems();" class="wsite-button wsite-button-small wsite-button-normal">
+            	<span class="wsite-button-inner">Start</span>
+         	</a>
+         	<a onclick="selectionCheck(); generatePDF();" class="wsite-button wsite-button-small wsite-button-normal" id="genPDF">
+				<span class="wsite-button-inner">Generate PDF</span>
+			</a>
+		</div>
+		<div id="problems">
+			<h3 id="currentProblem" class=margin5>Current Problem Goes Here.</h3>
+			<input class="wsite-form-input wsite-input" type="text" id="response" onkeypress="javascript:doit_onkeypress(event);">
+			<br>
+			<br>
+			<button onclick="checkAnswer();" class="wsite-button wsite-button-small wsite-button-normal" id="check">
+            	<span class="wsite-button-inner">Check Answer</span>
+         	</button>
+         	<button onclick="generateProblems();" class="wsite-button wsite-button-small wsite-button-normal" id="next">
+            	<span class="wsite-button-inner">Next Problem</span>
+         	</button>
+         	<button onclick="backToSelection();" class="wsite-button wsite-button-small wsite-button-normal">
+            	<span class="wsite-button-inner">Return to Selection Page</span>
+         	</button>
+			<br>
+			<p id="correctness"><br></p>
+			<br>
+			<br>
+			<div id="stats">
+				<p><b>Stats for this Session</b></p>
+				<p id="streak">Problems Correct In A Row: 0</p>
+				<p id="correct">Problems Correct: 0</p>
+				<p id="attempted">Problems Attempted: 0</p>			
+				<p id="percentage">Percentage Correct: 0%</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
