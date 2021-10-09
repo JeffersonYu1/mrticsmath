@@ -1,5 +1,5 @@
 # Mr. Tics Math
-Practice problem generator to aid students in preparing for the Number Sense and Calculator contests. Written by Jefferson Yu.
+Practice problem generator to aid students in preparing for the [Number Sense and Calculator contests](https://www.tmsca.org/index.php?option=com_content&view=article&id=56&Itemid=62). Written by Jefferson Yu.
 
 ## About the Project
 ### Motivation
