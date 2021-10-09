@@ -16,8 +16,8 @@ A majority of Number Sense questions come from the following categories. Users c
 A sample of some of the types of problems:
 ![Screenshot 2021-10-09 at 02-29-37 Mr Tics' Number Sense Tool](https://user-images.githubusercontent.com/43518772/136649088-11148ed1-a810-4df9-a048-6e309e76c079.png)
 
-Practice can be done directly on the website. Mr. Tics keeps track of the number of problems attempted and correct for each session:
-![Screenshot 2021-10-09 023329](https://user-images.githubusercontent.com/43518772/136649100-1964d5d1-f010-4148-bf99-1901422dd694.png)
+Practice can be done directly on the website. Mr. Tics keeps track of the number of problems attempted and correct for each session.
+![jdsgfs](https://user-images.githubusercontent.com/43518772/136649252-76985679-ce8e-47e3-98df-3e2470ce2c66.png)
 
 Practice problems can also be turned into a printable PDF with answers, such as the sample problems below:
 ![sfgsdfg](https://user-images.githubusercontent.com/43518772/136649121-9fd7aee3-193b-4143-9938-5b20fa49af50.png)
