@@ -1,0 +1,70 @@
+h1{
+	/* font-family: 'Lobster', cursive; */
+}
+
+#currentProblem {
+	font-size: 1.3em !important;
+}
+
+.frac {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    letter-spacing: 0.001em;
+    text-align: center;
+}
+.frac > span {
+    display: block;
+    padding: 0.1em;
+}
+.frac span.bottom {
+    border-top: thin solid black;
+}
+.frac span.symbol {
+    display: none;
+}
+
+#checkboxes {
+	overflow-x: hidden;
+	overflow-y: scroll;
+	height:300px;
+	width:100%;
+	-webkit-overflow-scrolling: touch;
+	/* font-family: 'Roboto', sans-serif; */
+}
+
+input[type=checkbox] {
+  margin-right: 5px;
+}
+
+#problems {
+	display:none;
+}
+
+#selector {
+	display:inline;
+}
+
+#mrtocscalctool {
+	display:none;
+}
+
+.wsite-button {
+	margin:5px;
+}
+
+.wsite-form-input {
+	margin:5px;
+}
+
+.margin5{
+	margin:5px;
+}
+
+#correctness{
+	margin:5px;
+}
+
+#stats p {
+	line-height: 0.3em;
+}

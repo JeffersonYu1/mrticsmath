@@ -1,0 +1,114 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML"></script>
+		<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
+		<script src="https://cdn.jsdelivr.net/npm/mathjs@7.1.0/dist/math.min.js" type="text/javascript"></script>
+
+		<!--
+		<script src="/jsPDF/jspdf.js"></script>
+		<script src="/jsPDF/plugins/addHTML.js"></script>
+		<script src="/jsPDF/plugins/from_HTML.js"></script>
+		<script src="/jsPDF/plugins/split_text_to_size.js"></script>
+		<script src="/jsPDF/plugins/standard_font_metrics.js"></script>
+		-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+		<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+		<script src="mrtocs.js"></script>
+		<link rel="stylesheet" type="text/css" href="mrtocs.css">
+		
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+	</head>
+
+	<body onload="getInfo()">
+	<!-- <body> -->
+	
+	<h1>Mr. Tics' Calculator Practice Tool</h1>
+	<p id="seeingThis">If you are seeing this and are not being prompted for login information, reload the page to try again, or head over to the <a href="/purchase.html">Purchase Page</a> to purchase the tool and request an account.<br><br>Mr. Tics' Calculator Practice Tool will appear here.</p>
+	<br>
+	<div id="mrtocscalctool">
+		<div id="selector">			
+			<a onclick="selectAll()" class="wsite-button wsite-button-small wsite-button-normal">
+            	<span class="wsite-button-inner">Select All</span>
+         	</a>
+         	<a onclick="deselectAll()" class="wsite-button wsite-button-small wsite-button-normal">
+            	<span class="wsite-button-inner">Deselect All</span>
+         	</a>
+			<br>
+			<br>
+			<div id="checkboxes">
+				<input type='checkbox' id='rule0' name='rule0' value='rule0' class='ruleCheckbox'>Arithmetic with 2 Numbers (Integers and Decimals)<br>
+				<input type='checkbox' id='rule1' name='rule1' value='rule1' class='ruleCheckbox'>Arithmetic with 3 Numbers (Integers and Decimals)<br>
+				<input type='checkbox' id='rule2' name='rule2' value='rule2' class='ruleCheckbox'>Arithmetic with 4 Numbers (Integers and Decimals)<br>
+				<input type='checkbox' id='rule3' name='rule3' value='rule3' class='ruleCheckbox'>Arithmetic with 3 Numbers (Integers, Decimals, Fractions)<br>
+				<input type='checkbox' id='rule4' name='rule4' value='rule4' class='ruleCheckbox'>Arithmetic with 4 Numbers (Integers, Decimals, Fractions)<br>
+				<input type='checkbox' id='rule5' name='rule5' value='rule5' class='ruleCheckbox'>Arithmetic with Parenthesis<br>
+				<input type='checkbox' id='rule6' name='rule6' value='rule6' class='ruleCheckbox'>Arithmetic with Exponents<br>
+				<input type='checkbox' id='rule7' name='rule7' value='rule7' class='ruleCheckbox'>Arithmetic with Radicals<br>
+				<input type='checkbox' id='rule8' name='rule8' value='rule8' class='ruleCheckbox'>Arithmetic with pi and e<br>
+				<input type='checkbox' id='rule9' name='rule9' value='rule9' class='ruleCheckbox'>Arithmetic with sin, cos, and tan<br>
+				<input type='checkbox' id='rule10' name='rule10' value='rule10' class='ruleCheckbox'>Arithmetic with log and ln<br>
+				<input type='checkbox' id='rule11' name='rule11' value='rule11' class='ruleCheckbox'>Elementary Pg. 1: Assorted Number Crunchers<br>
+				<input type='checkbox' id='rule12' name='rule12' value='rule12' class='ruleCheckbox'>Elementary Pg. 2: Assorted Number Crunchers<br>
+				<input type='checkbox' id='rule13' name='rule13' value='rule13' class='ruleCheckbox'>Elementary Pg. 3: Assorted Number Crunchers<br>
+				<input type='checkbox' id='rule14' name='rule14' value='rule14' class='ruleCheckbox'>Elementary Pg. 4: Assorted Number Crunchers<br>
+				<input type='checkbox' id='rule15' name='rule15' value='rule15' class='ruleCheckbox'>Elementary Pg. 5: Assorted Number Crunchers<br>
+				<input type='checkbox' id='rule16' name='rule16' value='rule16' class='ruleCheckbox'>Elementary Pg. 6: Assorted Number Crunchers<br>
+				<input type='checkbox' id='rule17' name='rule17' value='rule17' class='ruleCheckbox'>Elementary Pg. 7: Assorted Number Crunchers<br>
+				<!--
+				<input type='checkbox' id='rule18' name='rule18' value='rule18' class='ruleCheckbox'>High School Pg. 1: Assorted Number Crunchers<br>
+				<input type='checkbox' id='rule19' name='rule19' value='rule19' class='ruleCheckbox'>High School Pg. 2: Assorted Number Crunchers<br>
+				<input type='checkbox' id='rule20' name='rule20' value='rule20' class='ruleCheckbox'>High School Pg. 3: Assorted Number Crunchers<br>
+				<input type='checkbox' id='rule21' name='rule21' value='rule21' class='ruleCheckbox'>High School Pg. 4: Assorted Number Crunchers<br>
+				<input type='checkbox' id='rule22' name='rule22' value='rule22' class='ruleCheckbox'>High School Pg. 5: Assorted Number Crunchers<br>
+				<input type='checkbox' id='rule23' name='rule23' value='rule23' class='ruleCheckbox'>High School Pg. 6: Assorted Number Crunchers<br>
+				<input type='checkbox' id='rule24' name='rule24' value='rule24' class='ruleCheckbox'>High School Pg. 7: Assorted Number Crunchers<br>
+				-->
+
+			</div>
+			<br>
+			<a onclick="selectionCheck();generateProblems();" class="wsite-button wsite-button-small wsite-button-normal">
+            	<span class="wsite-button-inner">Start</span>
+         	</a>
+         	<!--
+	         	<a onclick="selectionCheck(); generatePDF();" class="wsite-button wsite-button-small wsite-button-normal" id="genPDF">
+					<span class="wsite-button-inner">Generate PDF</span>
+				</a>
+			-->
+		</div>
+		<div id="problems">
+			<p>Answers must be written in scientific notation and with 3 significant digits. (TMSCA Calculator Test formatting)</p>
+			<div id='currentProblemDiv'>
+				<h3 id="currentProblem" class=margin5>Current Problem Goes Here.</h3>
+			</div>
+			<input class="wsite-form-input wsite-input" type="text" id="responsetres" onkeypress="javascript:doit_onkeypress(event);">
+			<p style="display:inline"> x 10<sup><input class="wsite-form-input wsite-input" type="text" id="responseten" onkeypress="javascript:doit_onkeypress(event);"></sup></p>
+			<br>
+			<br>
+			<button onclick="checkAnswer();" class="wsite-button wsite-button-small wsite-button-normal" id="check">
+            	<span class="wsite-button-inner">Check Answer</span>
+         	</button>
+         	<button onclick="generateProblems();" class="wsite-button wsite-button-small wsite-button-normal" id="next">
+            	<span class="wsite-button-inner">Next Problem</span>
+         	</button>
+         	<button onclick="backToSelection();" class="wsite-button wsite-button-small wsite-button-normal">
+            	<span class="wsite-button-inner">Return to Selection Page</span>
+         	</button>
+			<br>
+			<p id="correctness"><br></p>
+			<br>
+			<br>
+			<div id="stats">
+				<p><b>Stats for this Session</b></p>
+				<p id="streak">Problems Correct In A Row: 0</p>
+				<p id="correct">Problems Correct: 0</p>
+				<p id="attempted">Problems Attempted: 0</p>			
+				<p id="percentage">Percentage Correct: 0%</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
