@@ -3,7 +3,7 @@ Practice problem generator to aid students in preparing for the [Number Sense an
 
 ## About the Project
 ### Motivation
-In simple terms, writing practice problems for the mental math (number sense) section of elementary school math contests takes quite a lot of time manually. Since the questions are formualic in nature, the idea of a practice problem generator came into play.
+In simple terms, writing practice problems for the mental math (Number Sense) section of elementary school math contests takes quite a lot of time manually. As a math team coach, I felt that I was unable to keep up with the rate that my students were finishing practice papers. Since Number Sense questions are formualic in nature, the idea of a practice problem generator was born.
 
 ### Releases
 The first version of Mr. Tics Math, v1.0.0, was released in 2017 directly onto the website. Small fixes were added every few months.
